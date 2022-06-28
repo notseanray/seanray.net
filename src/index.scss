@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  background: rgb(23, 27, 29);
+  animation-name: bg-animation;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@keyframes bg-animation {
+	from {
+    background: rgb(23, 27, 29);
+	}
+	50% {
+    background: rgb(0, 0, 0);
+	}
+  to {
+    background: rgb(23, 27, 29);
+	}
+}
+
+@keyframes fade {
+  from {
+    transform: translateY(100vh) scale(0);
+  }
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+@for $i from 1 through 10 {
+	header > :nth-child(#{$i}) {
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+		animation-duration: 100 + ($i - 1) * 20ms;
+	}
+}
