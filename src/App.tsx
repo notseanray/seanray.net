@@ -9,20 +9,20 @@ import Home from "./components/Home";
 
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import Projects from './components/Projects';
-// import Skills from './components/Skills';
 
 const Skills = lazy(() => import("./components/Skills"));
+const Music = lazy(() => import("./components/Music"));
+const Projects = lazy(() => import("./components/Projects"));
 
 const App: Component = () => {
   return (
     <main class="h-screen">
       <div class="flex-block text-center justify-center">
-      <p class="pt-2 text-4xl text-red-400 tracking-widest">
+      <p class="pt-2 font-bold text-4xl text-blue-400 tracking-widest">
         Sean Ray
       </p>
       <a
-        class="text-xs text-blue-400 tracking-widest"
+        class="text-xs font-semibold text-red-400 tracking-widest hover:underline"
         href="https://github.com/notseanray/seanray.net"
         target="_blank"
         rel="noopener noreferrer"
@@ -31,11 +31,13 @@ const App: Component = () => {
       </a>
       <Navbar />
       <header>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
+        <div class="mb-2" />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/music" element={<Music />} />
+        </Routes>
       </header>
       <Footer />
       </div>

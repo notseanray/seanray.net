@@ -1,5 +1,6 @@
 import emacs from "../assets/skills/tools/emacs.png";
 import nvim from "../assets/skills/tools/nvim.png";
+import solid from "../assets/skills/frameworks/solidjs-original.svg";
 
 const SkillIcon = (props: { icon: string; url: string }) => {
     return (
@@ -12,6 +13,7 @@ const SkillIcon = (props: { icon: string; url: string }) => {
             <img
                 class="p-1 h-16 bg-stone-700 rounded-md hover:bg-red-500 duration-300"
                 src={props.icon}
+                decoding="async"
                 alt=""
             />
         </a>
@@ -22,17 +24,23 @@ const Skills = () => {
     return (
         <>
             <div class="flex p-1 m-1 text-center justify-center">
-                <div class="w-6/12">
-                    <div class="text-xl text-slate-100">
+                <div class="w-9/12">
+                    <div class="text-xl font-bold text-slate-200">
                         Technologies I've Worked With
                     </div>
-                    <div class="text-sm text-slate-200">Languages</div>
+                    <div class="text-sm font-semibold text-slate-300">
+                        Languages
+                    </div>
                     <Langs />
-                    <div class="text-sm text-slate-200">Frameworks</div>
+                    <div class="text-sm font-semibold text-slate-300">
+                        Frameworks
+                    </div>
                     <Frameworks />
-                    <div class="text-sm text-slate-200">Tools & More</div>
+                    <div class="text-sm font-semibold text-slate-300">
+                        Tools & More
+                    </div>
                     <Tools />
-                    <div class="text-sm text-slate-200">
+                    <div class="text-sm font-semibold text-slate-300">
                         Interested In Learning
                     </div>
                     <Interested />
@@ -91,15 +99,15 @@ const Langs = () => {
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg"
-                url=""
+                url="https://html.com/html5/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg"
-                url=""
+                url="https://css3.com/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
-                url=""
+                url="https://sass-lang.com/"
             />
         </div>
     );
@@ -110,20 +118,17 @@ const Frameworks = () => {
         <div class="flex-wrap my-3 flex text-center justify-center">
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original-wordmark.svg"
-                url=""
+                url="https://vuejs.org/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
-                url=""
+                url="https://reactjs.org/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original-wordmark.svg"
-                url=""
+                url="https://svelte.dev/"
             />
-            <SkillIcon
-                icon="https://raw.githubusercontent.com/AcmeGamers/devicon/master/icons/solidjs/solidjs-original.svg"
-                url="https://www.solidjs.com/"
-            />
+            <SkillIcon icon={solid} url="https://www.solidjs.com/" />
         </div>
     );
 };
@@ -134,48 +139,48 @@ const Tools = () => {
             <SkillIcon icon={nvim} url="" />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg"
-                url=""
+                url="https://www.docker.com/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg"
-                url=""
+                url="https://git-scm.com/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original-wordmark.svg"
-                url=""
+                url="https://about.gitlab.com/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                url=""
+                url="https://code.visualstudio.com/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-plain.svg"
-                url=""
+                url="https://gradle.org/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg"
-                url=""
+                url="https://cmake.org/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg"
-                url=""
+                url="https://www.postgresql.org/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg"
-                url=""
+                url="https://www.sqlite.org/index.html"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-                url=""
+                url="https://aws.amazon.com/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                url=""
+                url="https://nodejs.org/"
             />
             <SkillIcon icon={emacs} url="" />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-                url=""
+                url="https://tailwindcss.com/"
             />
         </div>
     );
@@ -186,23 +191,23 @@ const Interested = () => {
         <div class="flex-wrap my-3 flex text-center justify-center">
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elixir/elixir-original.svg"
-                url=""
+                url="https://elixir-lang.org/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg"
-                url=""
+                url="https://www.haskell.org/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/julia/julia-original-wordmark.svg"
-                url=""
+                url="https://julialang.org/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
-                url=""
+                url="https://kotlinlang.org/"
             />
             <SkillIcon
                 icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/zig/zig-original.svg"
-                url=""
+                url="https://ziglang.org/"
             />
         </div>
     );

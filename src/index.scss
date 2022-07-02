@@ -10,10 +10,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   background: rgb(23, 27, 29);
-  animation-name: bg-animation;
-  animation-duration: 30s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
 
 code {
@@ -21,16 +17,28 @@ code {
     monospace;
 }
 
-@keyframes bg-animation {
-	from {
-    background: rgb(23, 27, 29);
-	}
-	50% {
-    background: rgb(0, 0, 0);
-	}
-  to {
-    background: rgb(23, 27, 29);
-	}
+#music-outline {
+  -webkit-text-stroke: 1px #23430C;
+	text-shadow: -1px 1px 2px #23430C,
+				  1px 1px 2px #23430C,
+				  1px -1px 0 #23430C,
+				  -1px -1px 0 #23430C;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-button:single-button {
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(66, 66, 94);
+}
+::-webkit-scrollbar-track {
+  background: rgb(23, 27, 29);
 }
 
 @keyframes fade {
